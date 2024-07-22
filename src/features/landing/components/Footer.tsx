@@ -1,3 +1,7 @@
+import { FaFacebook } from 'react-icons/fa'
+import { BsTwitterX } from 'react-icons/bs'
+import { RiInstagramFill } from 'react-icons/ri'
+
 export function Footer() {
   const contactInfo = [
     {
@@ -30,17 +34,17 @@ export function Footer() {
   const socialNetworks = [
     {
       description: 'Facebook',
-      icon: '',
+      Icon: <FaFacebook />,
       url: '',
     },
     {
       description: 'Instagram',
-      icon: '',
+      Icon: <RiInstagramFill />,
       url: '',
     },
     {
       description: 'Twitter',
-      icon: '',
+      Icon: <BsTwitterX />,
       url: '',
     },
   ]
@@ -48,7 +52,9 @@ export function Footer() {
     <div className="bg-[#413F3F] text-white p-10 h-[549px] ">
       <div className="flex justify-between mb-32">
         <div>
-          <img src="" alt="Telemed image" />
+          <h1 className="text-2xl">
+            <span className="text-purple-600">Tele</span>medicina
+          </h1>
         </div>
         <div>
           <p>Informacion de Contacto</p>
@@ -67,11 +73,11 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="flex">
+        <div className="flex gap-2">
           {socialNetworks.map((social) => (
-            <div key={social.description}>
-              <a href={social.url}>
-                <img src={social.icon} alt={social.description} />
+            <div key={social.description} className="">
+              <a href={social.url} className="text-4xl">
+                {social.Icon}
               </a>
             </div>
           ))}

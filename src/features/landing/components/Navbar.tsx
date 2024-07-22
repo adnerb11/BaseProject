@@ -1,12 +1,14 @@
+import { Button } from './atoms/Button'
+
 export const Navbar = () => {
   function handleClick() {}
 
   return (
     <header className="flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center justify-between gap-5 w-full">
-        <a href="javascript:void(0)">
-          <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className="w-36" />
-        </a>
+        <h1 className="text-2xl">
+          <span className="text-purple-600">Tele</span>medicina
+        </h1>
         <div
           id="collapseMenu"
           className="max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50"
@@ -32,69 +34,50 @@ export const Navbar = () => {
           </button>
 
           <ul className="lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
-            <li className="mb-6 hidden max-lg:block">
-              <a href="javascript:void(0)">
-                <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className="w-36" />
+            <li className="mb-6 hidden max-lg:block">Telemedicina</li>
+            <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
+              <a
+                href="javascript:void(0)"
+                className="hover:text-[#7661af] text-[#7661af] block font-semibold text-[15px]"
+              >
+                Preguntas Frecuentes
               </a>
             </li>
             <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                className="hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]"
+                className="hover:text-[#7661af] text-gray-500 block font-semibold text-[15px]"
               >
-                Home
+                Servicios
               </a>
             </li>
             <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                className="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
+                className="hover:text-[#7661af] text-gray-500 block font-semibold text-[15px]"
               >
-                Team
+                Contacto
               </a>
             </li>
             <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                className="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
+                className="hover:text-[#7661af] text-gray-500 block font-semibold text-[15px]"
               >
-                Feature
-              </a>
-            </li>
-            <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
-              <a
-                href="javascript:void(0)"
-                className="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
-              >
-                Blog
-              </a>
-            </li>
-            <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
-              <a
-                href="javascript:void(0)"
-                className="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
-              >
-                About
-              </a>
-            </li>
-            <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
-              <a
-                href="javascript:void(0)"
-                className="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
-              >
-                Contact
+                Sobre nosotros
               </a>
             </li>
           </ul>
         </div>
-
         <div className="flex max-lg:ml-auto space-x-3">
-          <button className="px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]">
-            Login
-          </button>
-          <button className="px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]">
-            Sign up
-          </button>
+          <Button
+            text={'Iniciar sesion'}
+            width={200}
+            color={'#543D87'}
+            textColor={'white'}
+            Icon={null}
+            key={1}
+          ></Button>
 
           <button id="toggleOpen" className="lg:hidden" onClick={handleClick}>
             <svg
