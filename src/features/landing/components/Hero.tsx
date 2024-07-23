@@ -3,6 +3,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { FaApple } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import HeroImage from '../../../assets/sesion/HeroImage.jpeg'
+import { Link } from 'react-router-dom'
 export function Hero() {
   return (
     <div className="h-[94.5vh] w-full flex-col">
@@ -50,14 +51,16 @@ export function Hero() {
               Icon={<FaApple />}
               key={1}
             ></Button>
-            <Button
-              text={'Iniciar sesión con correo'}
-              textColor="white"
-              width={400}
-              color={'#6B4CAA'}
-              Icon={<IoMdMail />}
-              key={1}
-            ></Button>
+            <Link to="/auth/register">
+              <Button
+                text={'Registrate con correo'}
+                textColor="white"
+                width={400}
+                color={'#6B4CAA'}
+                Icon={<IoMdMail />}
+                key={1}
+              ></Button>
+            </Link>
           </div>
         </div>
       </div>

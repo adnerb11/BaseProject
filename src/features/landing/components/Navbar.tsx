@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Button } from './atoms/Button'
 
 export const Navbar = () => {
@@ -70,14 +71,16 @@ export const Navbar = () => {
           </ul>
         </div>
         <div className="flex max-lg:ml-auto space-x-3">
-          <Button
-            text={'Iniciar sesion'}
-            width={200}
-            color={'#543D87'}
-            textColor={'white'}
-            Icon={null}
-            key={1}
-          ></Button>
+          <Link to="/auth">
+            <Button
+              text={'Iniciar sesion'}
+              width={200}
+              color={'#543D87'}
+              textColor={'white'}
+              Icon={null}
+              key={1}
+            ></Button>
+          </Link>
 
           <button id="toggleOpen" className="lg:hidden" onClick={handleClick}>
             <svg

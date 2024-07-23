@@ -1,4 +1,5 @@
 import { IoChevronBackSharp } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 function Register() {
   return (
@@ -8,7 +9,9 @@ function Register() {
         <div className="grid grid-cols-2">
           <div className="h-[50vh] flex flex-col">
             <div className="text-4xl m-10">
-              <IoChevronBackSharp />
+              <Link to={'/'}>
+                <IoChevronBackSharp />
+              </Link>
             </div>
             <div className="text-center h-full flex  flex-col justify-around">
               <div>
@@ -19,9 +22,9 @@ function Register() {
                 </p>
                 <p className="mt-4 text-xl">
                   ¿Ya tienes cuenta?
-                  <a href="" className="ml-4 hover:border border-solid p-2 rounded-2xl ">
+                  <Link to={'/auth'} className="ml-4 hover:border border-solid p-2 rounded-2xl ">
                     <span className="font-extrabold text-purple-700">Inicia Sesion</span>
-                  </a>
+                  </Link>
                 </p>
               </div>
               <div className="">
