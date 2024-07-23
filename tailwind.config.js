@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        authImage: "url('src/assets/sesion/HeroImage.jpeg')",
+      },
+    },
   },
   plugins: [],
-};
+}
