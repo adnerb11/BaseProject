@@ -1,4 +1,3 @@
-import React from 'react'
 import { Plan } from '../../interfaces/plan'
 import { Button } from './Button'
 
